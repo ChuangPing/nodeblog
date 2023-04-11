@@ -1,0 +1,36 @@
+<div class="header" style="background: #6ab04c">
+		<div class="w1100">
+			<!-- 网站logo开始 -->
+			<h1 class="logo fl">
+				<a href="/home/index"><img src="images/logo5.png" alt="个人博客"></a>
+			</h1>
+			<!-- 网站logo结束 -->
+			<!-- 网站导航开始 -->
+			<ul class="navigation fr">
+				<li>
+					<a href="/home/index" class="active"> {{home == "detil" ? "文章详情" : "首页"}}</a>
+				</li>
+				<li>
+					<a href="#"> {{userMessage && userMessage.username}}</a>
+				</li>
+				<!-- 当前登录用户角色为超级管理员 -->
+				{{if (userMessage && userMessage.role == "admin") }}
+				<li>
+					<a href="/admin/user"> 管理博客</a>
+				</li>
+				{{/if}}
+				<!-- 如果用户登录 -->
+				{{if userMessage}}
+				<li>
+					<a href="/admin/logout"> 退出登录</a>
+				</li>
+				{{else}}
+				<!-- 如果用户未登录 -->
+				<li>
+					<a href="/admin/logoin"> 登录</a>
+				</li>
+				{{/if}}
+			</ul>
+			<!-- 网站导航结束 -->
+		</div>
+	</div>

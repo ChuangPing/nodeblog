@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blog - client</title>
+<link rel="stylesheet" href="/home/css/base.css">
+<link rel="shortcut icon" href="favicon.ico"  type="image/x-icon"/> 
+{{block "link"}} {{/block}}
+</head>
+<body>
+{{block "content"}} {{/block}}
+</body>
+</html>

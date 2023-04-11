@@ -1,0 +1,13 @@
+{{extend './common/layout.art'}}
+
+{{block 'content'}}
+	<p class="bg-danger error">{{msg}}</p>
+{{/block}}
+
+{{block 'javaScript'}}
+	<script type="text/javascript">
+	setTimeout(function() {
+		location.herf = "/admin/login";
+	},3000);
+	</script>
+{{/block}}
